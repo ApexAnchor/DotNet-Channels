@@ -10,6 +10,11 @@ When building applications, especially those requiring long-running background t
 ## What are Channels?
 
 Channels are part of the .NET Core base library, eliminating the need for additional package dependencies. A Channel is a data structure designed to store data from a producer, which can then be consumed by one or more consumers. It's important to understand that Channels differ from a Publisher/Subscriber (Pub/Sub) model. In Channels, only one consumer can read a given message, unlike Pub/Sub, where a message can be received by multiple subscribers concurrently.
+There are 2 types of channels
+# Unbounded Channel  
+When you create an unbounded channel, by default, the channel can be used by any number of readers and writers concurrently.
+# Bounded Channel
+When you create a bounded channel, the channel is bound to a maximum capacity. When the bound is reached, the default behavior is that the channel asynchronously blocks the producer until space becomes available.
 
 ## Getting Started
 
