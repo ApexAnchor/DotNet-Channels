@@ -25,25 +25,6 @@ To illustrate the usage of Channels, let's create a simple console application.
 For our example, we'll use an unbounded channel, eliminating concerns about capacity or other constraints.
 
 ```csharp
-// Program.cs
-using System;
-using System.Threading.Channels;
-using System.Threading.Tasks;
-
-class Program
-{
-    static async Task Main()
-    {
-        // Create an unbounded channel
-        var channel = Channel.CreateUnbounded<string>();
-
-        // Start producer and consumer
-        var producerTask = ProduceDataAsync(channel.Writer);
-        var consumerTask = ConsumeDataAsync(channel.Reader);
-
-        // Wait for both tasks to complete
-        await Task.WhenAll(producerTask, consumerTask);
-    }
 
     static async Task ProduceDataAsync(ChannelWriter<string> writer)
     {
@@ -76,4 +57,4 @@ class Program
 }
 ```
 
-This example demonstrates a simple console application with a producer and a consumer using an unbounded channel.
+The example demonstrates a simple application with a producer and a consumer using an unbounded channel. The consumer is run as background service waiting for the messages to be published to channel.
