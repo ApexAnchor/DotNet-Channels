@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotnetChannels.Producer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82a186ddf4b13255d1b6b8e2b07ebc9ec415b08d")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotnetChannels.Producer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotnetChannels.Producer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
